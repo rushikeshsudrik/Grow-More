@@ -1,0 +1,47 @@
+     body{
+           background-color: white;
+       }
+       #page{
+            text-align: center;
+        margin-top: 25px;
+        color: grey;
+        justify-content: center ;
+        
+        
+        }
+        #back{
+            justify-content: center ;
+        }
+        form{
+            position: relative;
+            height: 50px;
+            font-size: 16px;
+            text-align: center;
+            border-radius: 0;
+        }
+        p{
+            position: relative;
+            height: 50px;
+            font-size: 16px;
+            text-align: center;
+            border-radius: 0;
+        }
+        #descript1{
+            height: 50px;
+            width: 500px;
+            border-style:groove ;
+            border-color:yellowgreen ;
+        }
+        #b1{
+            background-color: black;
+            color: white;
+            font-size: 15px;
+        }
+       
+       
+    #ToDo-id{
+        border: 5px solid gray;
+        font-family: sans-serif;
+        font-size: 25px;
+          
+    } 

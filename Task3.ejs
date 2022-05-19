@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <title>
+            <%= title %>
+        </title>
+
+        <link rel="stylesheet" href="/Task3_CN/css/home.css">
+        <script src="https://kit.fontawesome.com/f1c6c9d3aa.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+               
+       <p id="p1">
+           <p id="r1">
+   
+           Enrolled Students
+        </p>
+        <ol style="color: darkgreen;font-family: sans-serif;font-size: 25px;border-style:groove ;" id="back">
+            <p id="p11">
+                Description :
+            </p>
+            <% for(let i of content){
+                %>
+                     <li>
+                         <p>
+                             Name: <%= i.Name %>
+                         </p>
+                     </li>
+                     
+                         <p>
+                             Email-id: <%= i.Email %>
+                         </p>
+                     
+                     
+                         <p>
+                             Gender: <%= i.Gender %>
+                         </p>
+                         <p>
+                             Website: <%= i.Website %>
+                         </p>
+                        
+                         <p>
+                             Skills: <%= i.Skills %>
+                         </p>
+                         <a href="/delete-list/?id=<%= i._id %>" id="aid" >
+                            <i class="fas fa-window-close"></i>
+                        </a>
+                         
+                     <%}%>
+        </ol>
+    </p>
+    <div class="container">
+
+    
+       <form action="/create" method="post" id="f1" >
+           <div class="container">
+        <h1 style="color: purple;" id="page-heading">
+            Registration Form 
+       </h1>
+       <p>
+
+            Enter Name:
+           <input type="text" name="Name" placeholder="FirstName field" id="n1">
+        </p>
+        <p>
+
+        
+           Gender :
+           <input type="radio"  name="Gender" value="Male" id="g1">
+           <label for="Male">Male</label>
+           <input type="radio"  name="Gender" value="Female" id="g1">
+           <label for="Female">Female</label>
+        </p>
+        <p>
+
+        
+            Email-id:    
+           <input type="email" name="Email" placeholder="Email info." id="e1">
+        </p>
+           <p>
+           Website:
+           <input type="text" name="Website" placeholder="Add Website information">
+            
+        </p>
+            <p>
+
+            
+            Skills: 
+            <input type="radio"  name="Skills" value="Web-Development">
+                       <label for="Web-Development">Web-Development</label>
+                       <input type="radio"  name="Skills" value="Android-Development" >
+                       <label for="Android-Development">Android-Development</label>
+
+            </p>
+            <p>
+
+            
+           <button type="submit" id="b1">Register User</button>
+        </p>
+        </div>
+       </form>
+    </div>
+      <script type="text/javascript"src="/js/home.js"></script>
+    </body>
+</html>

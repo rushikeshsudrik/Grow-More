@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>
+            <%= title %>
+        </title>
+        <link rel="stylesheet" href="/views/ToDo.css">
+        <script src="https://kit.fontawesome.com/f1c6c9d3aa.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+
+        <h1 style="color: darkgoldenrod;font-family: sans-serif;" id="page" >
+            <i class="fas fa-tasks"></i>
+            TODO App 
+        </h1>
+
+        <form action="/create" method="post">
+            <input type="text" name="Description" placeholder="Description field" id="descript1" >
+            <br>
+            <br>
+            <select name="Category">
+                <option value="Personal" selected>Personal</option>
+                <option value="Work">Work</option>
+                <option value="Exercise">Exercise</option>
+            </select>
+            <input type="date" name="Date" placeholder="Enter date">
+            <button type="submit" id="b1">Add task</button>
+        </form>
+        <br>
+        <br>
+        <p style="color: blue; font-family: sans-serif;font-size:large ;">Tasks Added</p>
+        <div id="ToDo-list-container">
+            <ol style="color: darkgreen;font-family: sans-serif;font-size: 25px;" id="back"> 
+                <% for(let i of content){
+                    %>
+                    
+               
+                <li>
+                    <div id="ToDo-id">
+                    <p>Task: <%= i.Description %></p>
+                    <p>Description :<%= i.Category %> <button> Date :<%= i.Date %></button>  <a href="/delete-list/?id=<%= i._id %>" id="aid" >
+                        <i class="fas fa-window-close"></i>
+                    </a></p> 
+                   
+                </div>
+                <div class="delete-button">
+                </div>
+                </li>
+                <br>
+                <%}%>
+            </ol>
+
+        </div>
+
+    </body>
+</html>
